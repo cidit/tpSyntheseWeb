@@ -14,39 +14,23 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
     <meta charset="utf-8">
     <title>catalog</title>
   </head>
   <body>
     <header>
-      <img src="/img/icon.png" alt="icon">
+      <img src="img/misc/icon.png" alt="icon">
       <h1>L'oeil au beure noir</h1>
       <nav>
-        <a href="/html/contact.html">Nous contacter</a>
-        <a href="/index.html">Catalogue</a>
-        <a href="/html/cart.html">Panier</a>
+        <a href="html/contact.html">Nous contacter</a>
+        <a href="index.html">Catalogue</a>
+        <a href="html/cart.html">Panier</a>
       </nav>
     </header>
     <main>
-      <template id="item">
-        <div class="item">
-          <p>tags</p>
-          <h1>name</h1>
-          <img src="" alt="image">
-          <p>description</p>
-          <div class="item_adder">
-            <button type="button" name="more"><img src="" alt="+"></button>
-            <p>0</p><!-- how many itemps to add to the cart -->
-            <button type="button" name="less"><img src="" alt="-"></button>
-            <button type="button" name="add_to_cart">Ajouter au panier</button>
-          </div>
-        </div>
-      </template>
-      <template id="tag">
-        <span>#</span><span>tags</span><span>&nbsp;</span>
-      </template>
+
     </main>
     <footer>
       <a href="#">&aacute; propos</a>
@@ -55,7 +39,24 @@
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script type="text/javascript" src="/js/global.js"></script>
-    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
+  <template id="item">
+    <div class="item">
+      <p>tags</p>
+      <h2>name</h2>
+      <img src="" alt="image">
+      <p>description</p>
+      <div class="item_adder">
+        <button type="button" name="more"><span>+</span></button>
+        <p>0</p><!-- how many itemps to add to the cart -->
+        <button type="button" name="less"><span>-</span></button>
+        <button type="button" name="add_to_cart">Ajouter au panier</button>
+      </div>
+    </div>
+  </template>
+  <template id="tag">
+    <span>#</span><span>tags</span><span>&nbsp;</span>
+  </template>
 </html>
