@@ -17,9 +17,5 @@
 }
 
 .card-body p {
-  display: none;
-}
-
-.card-body p:hover {
-  display: inline;
+  overflow-x: visible;
 }
