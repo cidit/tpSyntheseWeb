@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
+    <title>catalog</title>
+    <meta charset="utf-8">
 
-
-<!-- ADD VIEWPORT -->
-
-
+    <!-- VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- BOOTSTRAP -->
     <!-- Latest compiled and minified CSS -->
@@ -19,51 +19,37 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
-    <meta charset="utf-8">
-    <title>catalog</title>
   </head>
   <body>
     <header>
-      <img src="img/misc/icon.png" alt="icon">
-      <div>
-        <h1>L'oeil au beure noir</h1>
-        <nav>
-          <a href="html/contact.html">Nous contacter</a>
-          <a href="index.html">Catalogue</a>
-          <a href="html/cart.html">Panier</a>
-        </nav>
-      </div>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">
+          <img class="rounded-circle" src="img/misc/icon.png" alt="logo">
+          <span>L'oeil au beure noir</span>
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+          </li>
+        </ul>
+
+      </nav>
     </header>
     <main>
+
     </main>
     <footer>
-      <a href="html/about.html">a propos</a>
-      <p>&copy; Cegep Andr&eacute; laurendeau, 23 mai 2019</p>
     </footer>
+
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script type="text/javascript" src="js/global.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
   </body>
-  <template id="item">
-    <div class="item">
-      <p>tags</p>
-      <h2>name</h2>
-      <img src="" alt="image">
-      <h3>price</h3>
-      <p>description</p>
-      <div class="item_adder">
-        <button type="button" name="more"><span>+</span></button>
-        <p>0</p><!-- how many itemps to add to the cart -->
-        <button type="button" name="less"><span>-</span></button>
-        <button type="button" name="add_to_cart">Ajouter au panier</button>
-      </div>
-    </div>
-  </template>
-  <template id="tag">
-    <span>#</span><span>tags</span><span>&nbsp;</span>
-  </template>
 </html>
