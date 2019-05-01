@@ -30,3 +30,7 @@ requirements:
     each pages must have a similar look and feel
     navigation must be easy and ergonomic
   the site must be responsive
+
+  TODO:
+  finish all other html files with bootstrap4
+  fill the css
