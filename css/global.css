@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  height: 10%;
+}
+
+header nav a img {
+  width: 10%;
+  padding-left: 1%;
+}
+
+main {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+footer {
+  position: static;
+  bottom: 0;
+  text-align: center;
+}
+
+footer p {
+  color: lightgrey;
+}
