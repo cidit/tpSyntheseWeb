@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../css/cart.css">
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <header class="container-fluid bg-dark">
+      <nav class="navbar navbar-expand-sm navbar-dark">
         <a class="navbar-brand bg-danger rounded" href="../index.html">
           <img class="rounded-circle" src="../img/misc/icon.png" alt="logo">
           <span>L'oeil au beure noir</span>
@@ -32,9 +32,16 @@
       </nav>
     </header>
     <main class="container-fluid bg-light">
-      <h1>PANIER</h1>
-      <!-- VARIATION COMMENCE ICI -->
-      <!-- VARIATION FINIE ICI -->
+      <div class="row">
+        <div class="col-6">
+          <h1>PANIER</h1>
+        </div>
+        <div class="col-6">
+          <a href="purchase.html">
+            <button class="btn btn-primary"type="button" name="buy">Acheter</button>
+          </a>
+        </div>
+      </div>
     </main>
     <footer class="container-fluid bg-dark">
       <a class="btn btn-link" href="html/about">A propos de l'auteur</a>
@@ -46,7 +53,7 @@
     <script src="../js/index.js"></script>
   </body>
   <template id="itemcard">
-    <div class="card col-12 col-sm-6 col-md-4 bg-light">
+    <div class="card col-12">
       <div class="card-header">
         <h3 class="card-title">ITEM NAME</h3>
         <span class="card-text">ITEM NUMBER</span>
