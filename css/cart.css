@@ -1,4 +1,9 @@
-main div div a {
-  float: right;
-  display: inline-block;
+main .itemnumber::before {
+  content: "#";
+  color: gray;
+}
+
+main .itemprice::after {
+  content: "$";
+  color: gray;
 }

@@ -20,6 +20,11 @@ main {
   padding-bottom: 10%;
 }
 
+main div div a {
+  float: right;
+  display: inline-block;
+}
+
 footer {
   position: fixed;
   bottom: 0;
