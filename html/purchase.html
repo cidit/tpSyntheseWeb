@@ -34,7 +34,7 @@
     <main class="container-fluid bg-light">
       <div class="row">
         <div class="col-6">
-          <h1>ACHETER</h1>
+          <h1>CONFIRMATION</h1>
         </div>
         <div class="col-6">
           <a href="purchase.html">
@@ -46,24 +46,42 @@
         <thead>
           <tr>
             <th>Num&eacute;ro</th>
-            <th>Image</th>
             <th>Nom</th>
             <th>Prix (CAN)</th>
             <th>Quantit&eacute;</th>
-            <th>Enlever</th>
+            <th>Total (CAN)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><span class="itemnumber">ITEM NUMBER</span></td>
-            <td><img class="img-thumbnail" src="#" alt="image du produit"></td>
             <td><h5>ITEM NAME</h5></td>
             <td><span class="itemprice">ITEM PRICE</span></td>
             <td>ITEM QUANTITY</td>
-            <td><button class="btn btn-secondary" type="button" name="remove">Enlever</button></td>
+            <td><h5 class="itemtotal">ITEM TOTAL</h5></td>
           </tr>
         </tbody>
       </table>
+      <div class="container">
+        <table class="table">
+          <tr>
+            <td>Prix avant taxes:</td>
+            <td><span>TOTAL PRICE</span></td>
+          </tr>
+          <tr>
+            <td>TPS (5%):</td>
+            <td><span>TOTAL + TPS</span></td>
+          </tr>
+          <tr>
+            <td>TVQ (9.975%):</td>
+            <td><span>TOTAL + TVQ</span></td>
+          </tr>
+          <tr>
+            <td>Prix apres taxes:</td>
+            <td><h4><span>FINAL PRICE</span></h4></td>
+          </tr>
+        </table>
+      </div>
     </main>
     <footer class="container-fluid bg-dark">
       <a class="btn btn-link" href="about">A propos de l'auteur</a>
@@ -77,11 +95,10 @@
   <template id="itemcard">
     <tr>
       <td><span class="itemnumber">ITEM NUMBER</span></td>
-      <td><img class="img-thumbnail" src="#" alt="image du produit"></td>
       <td><h5>ITEM NAME</h5></td>
       <td><span class="itemprice">ITEM PRICE</span></td>
       <td>ITEM QUANTITY</td>
-      <td><button class="btn btn-secondary" type="button" name="remove">Enlever</button></td>
+      <td><h5 class="itemtotal">ITEM TOTAL</h5></td>
     </tr>
   </template>
 </html>
