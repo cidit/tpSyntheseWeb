@@ -20,7 +20,7 @@ main {
   padding-bottom: 10%;
 }
 
-main div div a {
+main div div button {
   float: right;
   display: inline-block;
 }
