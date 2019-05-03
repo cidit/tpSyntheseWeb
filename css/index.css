@@ -16,6 +16,10 @@
   color: gray;
 }
 
+.card-body img {
+  width: 150px;
+}
+
 .card-body p {
   overflow-x: visible;
 }

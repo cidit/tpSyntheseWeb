@@ -7,3 +7,7 @@ main .itemprice::after {
   content: "$";
   color: gray;
 }
+
+main table tbody tr td img {
+  width: 50px;
+}
