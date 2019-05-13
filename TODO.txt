@@ -31,11 +31,5 @@ requirements:
     navigation must be easy and ergonomic
   the site must be responsive
 
-<<<<<<< HEAD
 
 use COREFTP
-=======
-  TODO:
-  finish all other html files with bootstrap4
-  fill the css
->>>>>>> 7985d3f5fe83d3b15c3b84f7ab5eaca427c6210c
