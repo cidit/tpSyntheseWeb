@@ -1,0 +1,25 @@
+.card {
+  padding: 2%;
+}
+
+.card-header h3 {
+  display: inline-block;
+}
+
+.card-header span::before {
+  content: "#";
+  color: gray;
+}
+
+.card-header h4::after {
+  content: "$ CAN";
+  color: gray;
+}
+
+.card-body img {
+  width: 150px;
+}
+
+.card-body p {
+  overflow-x: visible;
+}

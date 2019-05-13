@@ -1,47 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-    <!-- BOOTSTRAP -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <title>LOeilAuBeureNoir/catalogue</title>
     <meta charset="utf-8">
-    <title>catalog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <header>
-      <img>
-      <h1>Le Reliquaire / L'oeil au beure noir</h1>
-      <nav>
-        <a href="/html/contact.html">Nous contacter</a>
-        <a href="/index.html">Catalogue</a>
-        <a href="/html/cart.html">Panier</a>
-        <a href="/html/purchase.html">Acheter</a>
-        <a href="/html/bill.html">Facture</a>
+    <header class="container-fluid bg-dark">
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="navbar-brand bg-danger rounded" href="index.html">
+          <img class="rounded-circle" src="img/misc/icon.png" alt="logo">
+          <span>L'oeil au beure noir</span>
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="html/contact.html">Nous contacter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Catalogue</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html/cart.html">Panier</a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <main>
-
+    <main class="container-fluid bg-light">
+      <div class="row">
+        <div class="col-12">
+          <h1>CATALOGUE</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card col-12 col-sm-6 col-md-4 bg-light">
+          <div class="card-header">
+            <h3 class="card-title">Clous de J&eacute;sus</h3>
+            <span class="card-text">001</span>
+            <h4 class="card-text">10,000</h4>
+          </div>
+          <div class="card-body">
+            <img class="card-img-top" src="img/items/001.jpg" alt="image du produit">
+            <p class="card-text">les clous originalement utilis&eacute;s pour clouer J&eacute;sus a la croix.</p>
+          </div>
+          <div class="card-footer">
+            <form>
+              <input type="number" name="howMany" value="howMany" placeholder="0">
+              <button class="btn btn-primary" type="submit" name="addToCart">Ajouter au panier</button>
+            </form>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-4 bg-light">
+          <div class="card-header">
+            <h3 class="card-title">Pickle de contrebande</h3>
+            <span class="card-text">002</span>
+            <h4 class="card-text">0.50</h4>
+          </div>
+          <div class="card-body">
+            <img class="card-img-top" src="img/items/002.jpg" alt="image du produit">
+            <p class="card-text">Un des oiseaux de Isadora Tremblay. Humblement "emprunt&eacute;" a long terme. Un peu turbulant.</p>
+          </div>
+          <div class="card-footer">
+            <form>
+              <input type="number" name="howMany" value="howMany" placeholder="0">
+              <button class="btn btn-primary" type="submit" name="addToCart">Ajouter au panier</button>
+            </form>
+          </div>
+        </div>
+        <div class="card col-12 col-sm-6 col-md-4 bg-light">
+          <div class="card-header">
+            <h3 class="card-title">Poster de Tommy Wiseau</h3>
+            <span class="card-text">003</span>
+            <h4 class="card-text">100</h4>
+          </div>
+          <div class="card-body">
+            <img class="card-img-top" src="img/items/003.jpg" alt="image du produit">
+            <p class="card-text">Un poster du c&eacute;lebre Tommy Wiseau, directeur et r&eacute;dacteur du pire film de tous les temps: The Room.</p>
+          </div>
+          <div class="card-footer">
+            <form>
+              <input type="number" name="howMany" value="howMany" placeholder="0">
+              <button class="btn btn-primary" type="submit" name="addToCart">Ajouter au panier</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>
-      <a href="#">&aacute; propos</a>
-      <p>&copy; Cegep Andr&eacute; laurendeau, 23 mai 2019</p>
+    <footer class="container-fluid bg-dark">
+      <a class="btn btn-link" href="html/about.html">A propos de l'auteur</a>
+      <p>&copy; C&eacute;gep Andr&eacute; Laurendeau, 23 mai 2019</p>
     </footer>
-
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script type="text/javascript" src="/js/global.js"></script>
-    <script type="text/javascript" src="/js/index.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
   </body>
+  <template id="itemcard">
+    <div class="card col-12 col-sm-6 col-md-4 bg-light">
+      <div class="card-header">
+        <h3 class="card-title">ITEM NAME</h3>
+        <span class="card-text">ITEM NUMBER</span>
+        <h4 class="card-text">ITEM PRICE</h4>
+      </div>
+      <div class="card-body">
+        <img class="card-img-top" src="#" alt="image du produit">
+        <p class="card-text">ITEM DESCRIPTION</p>
+      </div>
+      <div class="card-footer">
+        <form>
+          <input type="number" name="howMany" value="howMany" placeholder="0">
+          <button class="btn btn-primary" type="submit" name="addToCart">Ajouter au panier</button>
+        </form>
+      </div>
+    </div>
+  </template>
 </html>
