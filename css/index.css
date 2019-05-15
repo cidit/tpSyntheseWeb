@@ -23,3 +23,7 @@
 .card-body p {
   overflow-x: visible;
 }
+
+.card-footer input, .card-footer button {
+  width: 50%;
+}
