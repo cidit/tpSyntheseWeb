@@ -1,24 +1,18 @@
-main .itemnumber::before {
-  content: "#";
-  color: gray;
-}
-
-main .itemprice::after {
-  content: "$";
-  color: gray;
-}
-
-main .itemtotal::after {
-  content: "$";
-  color: gray;
-}
-
 main .container {
   float: right;
   width: 50%;
 }
 
-main .container span::after {
+main span::after {
   content: "$";
   color: gray;
+}
+
+main .itemnumber::before {
+  content: "#";
+  color: gray;
+}
+
+main .itemnumber::after {
+  content: "";
 }
