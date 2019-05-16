@@ -14,13 +14,11 @@ $(window).on('load', function(){
 });
 
 function save(){
-  var dirtyCart = cart;
-  var cleanCart = {};
-  for (var key in dirtyCart) {
-    if (dirtyCart[key]['qntt'] > 0) {
-      cleanCart[key] = dirtyCart[key];
+  for (var key in cart) {
+    if (cart[key]['qntt'] <= 0) {
+      delete cart[key];
     }
   }
-  var serializedCart = JSON.stringify(cleanCart);
+  var serializedCart = JSON.stringify(cart);
   localStorage.setItem('cart', serializedCart);
 }
