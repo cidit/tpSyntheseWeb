@@ -58,3 +58,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://reactjs.org/docs/lists-and-keys.html#keys
 https://reactjs.org/tutorial/tutorial.html
 https://www.w3schools.com/jsref/event_onchange.asp
+https://stackoverflow.com/questions/43948828/how-to-pass-an-array-of-items-in-react-js
+https://medium.com/@bretdoucette/understanding-this-setstate-name-value-a5ef7b4ea2b4
+https://stackoverflow.com/questions/38465005/accessing-key-name-in-key-value-pairs-on-props-object-in-react
