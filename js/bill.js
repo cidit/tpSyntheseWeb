@@ -30,6 +30,24 @@ $(document).ready(function(){
   $('#tvq').text(tvq);
   $('#pat').text(pat);
 
+  $('#date').text(getMoment());
+  $('#nbitems').text(Object.keys(cart).length);
+
   cart = {};
   save();
 });
+
+function getMoment(){
+  var d = new Date();
+  var jdls = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+  var mdla = ["janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre"];
+
+  var day = jdls[d.getDay()];
+  var date = d.getDate();
+  var month = mdla[d.getMonth()];
+  var year = d.getFullYear();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+
+  return day + ' ' + date + ' ' + month + ' ' + year + ' ' + hours + 'h' + minutes;
+}
