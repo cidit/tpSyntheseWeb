@@ -1,36 +1,4 @@
-concepts:
-  Responsive Web Design
-  Object Oriented Programing
-  Elements reacting to Events
-  Form Validation
-  Client Side Data Storage
-
-rules:
-  assignment is to be done ALONE
-  assignment is to be submitted on LEA and the dedicated server
-  indicate the site's URL in a text document submitted to LEA once it is in working order
-  language must be FRENCH
-  code must not have either VALIDATION, EXECUTION or SYNTAX errors or else the grade will not surpass 75%
-
-requirements:
-  minimum 5 pages with the following functionalities:
-    consult the catalog (index)
-    consult the cart (session storage)
-    confirm purchases
-    receive and consult billing
-    contact admin
-    add or remove items from cart
-  use object oriented programing
-  each pages must have a header displaying the site's name and logo
-  each pages must have a footer containing at least:
-    information on the author
-    the site's creation date (23 may 2019)
-  each pages must have a navigation tool
-  the site must seem professional, therefore:
-    each pages must have a similar look and feel
-    navigation must be easy and ergonomic
-  the site must be responsive
-
+contact(react)
+purchase(confirmation popup)
 
 use COREFTP
- 
