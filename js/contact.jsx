@@ -79,17 +79,14 @@ class Input extends React.Component {
     const type = this.props.type;
     const meta = this.props.meta;
     const input = () => {
-      switch (type) {
-        case 'radio':
-          return(
-
-          );
-          break;
-        default:
-          return(
-
-          );
-      }
+      if ('radio')
+        return(
+          null
+        )
+      else
+        return(
+          null
+        )
     };
     return {input};
   }
