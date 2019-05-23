@@ -75,20 +75,30 @@ class Form extends React.Component {
 
 class Input extends React.Component {
   render() {
-    const info = this.props.info;
-    const type = this.props.type;
     const meta = this.props.meta;
-    const input = () => {
-      if ('radio')
-        return(
-          null
-        )
-      else
-        return(
-          null
-        )
-    };
-    return {input};
+    let myStatus;
+    if (meta.type = 'radio') {
+      myStatus = (
+        <div>
+          <div>
+            <label></label>
+            <input type="" name="" value="" />
+          </div>
+          <div>
+            <label></label>
+            <input type="" name="" value="" />
+          </div>
+        </div>
+      )
+    } else {
+      myStatus = (
+        <div>
+          <label></label>
+          <input type="" name="" value="" />
+        </div>
+      )
+    }
+    return {myStatus};
   }
 }
 
