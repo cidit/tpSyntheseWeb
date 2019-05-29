@@ -15,12 +15,27 @@ class Form extends React.Component {
       message: 'Entrez votre message',
     };
     this.state = this.initialState;
+    this.handleEvent = this.handleEvent.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleEvent = (e) => {
+  handleEvent(e) {
     const name = e.target.id;
     const value = e.target.value;
     this.setState({[name]: value});
+  }
+
+  handleSubmit(e) {
+    const numbers = /[0-9]/;
+    const specials = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._]+$/g
+    if (numbers.test(this.state.firstname) || numbers.test(this.state.lastname)){
+      alert("pas de chiffres permits dans le nom et le prenom");
+      e.preventDefault();
+    }
+    if (specials.test(this.state.firstname) || specials.test(this.state.lastname)){
+      alert("pas de charcacteres speciaux permits dans le nom et le prenom a part le \'-\'");
+      e.preventDefault();
+    }
   }
 
   render() {
@@ -32,7 +47,7 @@ class Form extends React.Component {
         labelText: 'Prenom:',
         placeholder: 'Felix',
         required: 'required',
-        autofocus: 'autofocus',
+        autoFocus: 'autofocus',
       },
       ln: {
         type: 'text',
@@ -53,7 +68,7 @@ class Form extends React.Component {
           id: 'male',
           labelText: ' Male',
           value: 'M',
-          checked: 'checked',
+          defaultChecked: 'defaultChecked',
         },
         r2: {
           id: 'female',
@@ -68,11 +83,12 @@ class Form extends React.Component {
         id: 'age',
         labelText: 'Age:',
         placeholder: '17',
-        value: '17',
+        defaultValue: '17',
       },
       fi: {
         id: 'famillialincome',
         labelText: 'Revenu famillial:',
+        value: '[50k-70k[',
         options: {
           _1:{
             value: '[1-25k[',
@@ -85,7 +101,6 @@ class Form extends React.Component {
           _3: {
             value: '[50k-70k[',
             text: '50 000$ a 69 999$',
-            selected: 'selected',
           },
           _4: {
             value: '[70k-100k[',
@@ -121,15 +136,15 @@ class Form extends React.Component {
     };
     return(
       <form method="post">
-        <Input meta={attr['fn']} />
-        <Input meta={attr['ln']} />
-        <Input meta={attr['e']} />
-        <Input meta={attr['g']} />
-        <Input meta={attr['a']} />
-        <Select meta={attr['fi']} />
-        <TextArea meta={attr['m']} />
-        <Button meta={attr['s']} />
-        <Button meta={attr['r']} />
+        <Input meta={attr['fn']} onChange={this.handleEvent} />
+        <Input meta={attr['ln']} onChange={this.handleEvent} />
+        <Input meta={attr['e']} onChange={this.handleEvent} />
+        <Input meta={attr['g']} onChange={this.handleEvent} />
+        <Input meta={attr['a']} onChange={this.handleEvent} />
+        <Select meta={attr['fi']} onChange={this.handleEvent} />
+        <TextArea meta={attr['m']} onChange={this.handleEvent} />
+        <Button meta={attr['s']} onChange={this.handleEvent} />
+        <Button meta={attr['r']} onChange={this.handleEvent} />
       </form>
     )
   }
@@ -148,7 +163,7 @@ class Input extends React.Component {
       myStatus = (
         <div>
           <div>
-            <input id={r1.id} value={r1.value} checked={r1.checked} {...misc} />
+            <input id={r1.id} value={r1.value} defaultChecked={r1.checked} {...misc} />
             <label htmlFor={r1.id}>{r1.labelText}</label>
           </div>
           <div>
@@ -166,16 +181,22 @@ class Input extends React.Component {
         </div>
       )
     }
-    return {myStatus};
+    return myStatus;
   }
 }
 
 class Select extends React.Component {
   render() {
-    const meta = this.props.meta;
+    const {id, labelText, value, options, onChange} = this.props.meta;
+    var optns = Object.keys(options).map(function(key) {
+      return <option key={key} value={options[key]['value']}>{options[key]['text']}</option>
+    });
     return(
       <div className="form-group">
-
+        <label htmlFor={id}>{labelText}</label>
+        <select className="form-control" id={id} value={value} onChange={onChange}>
+          {optns}
+        </select>
       </div>
     )
   }
